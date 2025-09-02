@@ -58,7 +58,7 @@ Search indexed documents using natural language queries:
 python search_documents.py --query "machine learning algorithms"
 
 # Search with custom result count
-python search_documents.py --query "neural networks" --k 10
+python search_documents.py --query "neural networks" --k 5
 
 # Search for specific concepts
 python search_documents.py --query "deep learning applications in healthcare"
