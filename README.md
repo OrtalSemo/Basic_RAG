@@ -1,15 +1,10 @@
 # RAG Pipeline with Gemini API
 
-A Retrieval-Augmented Generation (RAG) pipeline that uses Google Gemini embeddings and PostgreSQL for semantic document search.
+A Retrieval-Augmented Generation (RAG) pipeline using Google Gemini embeddings and PostgreSQL for semantic search.
 
 ## Overview
 
-This project implements a simple but effective RAG system that:
-- Extracts text from PDF and DOCX documents
-- Splits text using configurable strategies
-- Generates embeddings using Google Gemini's text-embedding-004 model
-- Stores documents and embeddings in PostgreSQL
-- Performs semantic search using cosine similarity
+This project extracts text from documents, splits it into chunks, generates embeddings with Gemini, and stores them in PostgreSQL for fast semantic search.
 
 ## Installation
 
@@ -84,14 +79,6 @@ The system automatically creates a `documents` table with:
 - `filename`: Source document filename
 - `split_strategy`: Text splitting method used
 - `created_at`: Timestamp of indexing
-
-## Technical Details
-
-- **Embedding Model**: Google Gemini `text-embedding-004`
-- **Similarity**: Cosine similarity computed in Python
-- **Storage**: PostgreSQL with JSON columns for embeddings
-- **Text Processing**: Supports PDF (via PyPDF2/pdfplumber) and DOCX files
-- **Interface**: Command-line only, designed for automation and scripting
 
 ## Requirements
 
